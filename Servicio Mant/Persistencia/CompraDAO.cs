@@ -70,7 +70,7 @@ namespace Servicio_Mant.Persistencia
             }
             return compraEncontrada;
         }
-
+        //cambio
         public Compra ModificarCompra(Compra compraAModificar)
         {
             Compra compraModificada = null;
