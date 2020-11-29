@@ -28,6 +28,7 @@ namespace Servicio_Mant.Persistencia
                     comando.ExecuteNonQuery();
                 }
             }
+// holas            
             DespachoCreado = Obtener(DespachoACrear.id_compra);
             return DespachoCreado;
         }
