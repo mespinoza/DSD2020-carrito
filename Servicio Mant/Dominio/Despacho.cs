@@ -12,8 +12,6 @@ namespace Servicio_Mant.Dominio
         [DataMember]
         public int id_despacho { get; set; }
         [DataMember]
-        public string ubicacion { get; set; }
-        [DataMember]
         public DateTime fecha { get; set; }
         [DataMember]
         public int id_compra { get; set; }

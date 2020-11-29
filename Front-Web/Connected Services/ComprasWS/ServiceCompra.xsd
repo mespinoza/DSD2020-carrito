@@ -14,8 +14,9 @@
       <xs:element minOccurs="0" name="FechaEntrega" type="xs:dateTime" />
       <xs:element minOccurs="0" name="IdCliente" type="xs:int" />
       <xs:element minOccurs="0" name="IdCompra" type="xs:int" />
-      <xs:element minOccurs="0" name="IdPago" type="xs:int" />
       <xs:element minOccurs="0" name="IdPersona" type="xs:int" />
+      <xs:element minOccurs="0" name="IdTipoEntrega" type="xs:int" />
+      <xs:element minOccurs="0" name="IdTipoEstado" type="xs:int" />
       <xs:element minOccurs="0" name="SumaTotal" type="xs:decimal" />
     </xs:sequence>
   </xs:complexType>

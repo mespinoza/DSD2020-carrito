@@ -14,20 +14,19 @@ namespace Servicio_Mant.Persistencia
         public Despacho CrearDespacho(Despacho DespachoACrear)
         {
             Despacho DespachoCreado = null;
-            string sql = "INSERT INTO Despacho VALUES (@ubicacion, @fecha, @id_compra, @id_tipo_estado, @estado)";
+            string sql = "INSERT INTO Despacho VALUES ( @fecha, @id_compra, @id_tipo_estado, @estado)";
             using (SqlConnection conexion = new SqlConnection(cadenaConexion))
             {
                 conexion.Open();
                 using (SqlCommand comando = new SqlCommand(sql, conexion))
                 {
-                    comando.Parameters.Add(new SqlParameter("@ubicacion", DespachoACrear.ubicacion));
                     comando.Parameters.Add(new SqlParameter("@fecha", DespachoACrear.fecha));
                     comando.Parameters.Add(new SqlParameter("@id_compra", DespachoACrear.id_compra));
                     comando.Parameters.Add(new SqlParameter("@id_tipo_estado", DespachoACrear.id_tipo_estado));
                     comando.Parameters.Add(new SqlParameter("@estado", DespachoACrear.estado));
                     comando.ExecuteNonQuery();
                 }
-            }
+            }       
             DespachoCreado = Obtener(DespachoACrear.id_compra);
             return DespachoCreado;
         }
@@ -49,7 +48,6 @@ namespace Servicio_Mant.Persistencia
                         {
                             DespachoEncontrado = new Despacho()
                             {
-                                ubicacion = (string)resultado["ubicacion"],
                                 fecha = (DateTime)resultado["fecha"],
                                 id_compra = (int)resultado["id_compra"],
                                 id_tipo_estado = (int)resultado["id_tipo_estado"],
@@ -83,7 +81,6 @@ namespace Servicio_Mant.Persistencia
                         {
                             DespachoEncontrado = new Despacho()
                             {
-                                ubicacion = (string)resultado["ubicacion"],
                                 fecha = (DateTime)resultado["fecha"],
                                 id_compra = (int)resultado["id_compra"],
                                 id_tipo_estado = (int)resultado["id_tipo_estado"],

@@ -41,10 +41,13 @@ namespace Front_Web.ComprasWS {
         private int IdCompraField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdPagoField;
+        private int IdPersonaField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdPersonaField;
+        private int IdTipoEntregaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdTipoEstadoField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private decimal SumaTotalField;
@@ -138,19 +141,6 @@ namespace Front_Web.ComprasWS {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int IdPago {
-            get {
-                return this.IdPagoField;
-            }
-            set {
-                if ((this.IdPagoField.Equals(value) != true)) {
-                    this.IdPagoField = value;
-                    this.RaisePropertyChanged("IdPago");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
         public int IdPersona {
             get {
                 return this.IdPersonaField;
@@ -159,6 +149,32 @@ namespace Front_Web.ComprasWS {
                 if ((this.IdPersonaField.Equals(value) != true)) {
                     this.IdPersonaField = value;
                     this.RaisePropertyChanged("IdPersona");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int IdTipoEntrega {
+            get {
+                return this.IdTipoEntregaField;
+            }
+            set {
+                if ((this.IdTipoEntregaField.Equals(value) != true)) {
+                    this.IdTipoEntregaField = value;
+                    this.RaisePropertyChanged("IdTipoEntrega");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int IdTipoEstado {
+            get {
+                return this.IdTipoEstadoField;
+            }
+            set {
+                if ((this.IdTipoEstadoField.Equals(value) != true)) {
+                    this.IdTipoEstadoField = value;
+                    this.RaisePropertyChanged("IdTipoEstado");
                 }
             }
         }
@@ -195,6 +211,12 @@ namespace Front_Web.ComprasWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceCompra/ListarCompra", ReplyAction="http://tempuri.org/IServiceCompra/ListarCompraResponse")]
         System.Threading.Tasks.Task<Front_Web.ComprasWS.Compra[]> ListarCompraAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceCompra/ModificarCompra", ReplyAction="http://tempuri.org/IServiceCompra/ModificarCompraResponse")]
+        Front_Web.ComprasWS.Compra ModificarCompra([System.ServiceModel.MessageParameterAttribute(Name="ModificarCompra")] Front_Web.ComprasWS.Compra ModificarCompra1);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceCompra/ModificarCompra", ReplyAction="http://tempuri.org/IServiceCompra/ModificarCompraResponse")]
+        System.Threading.Tasks.Task<Front_Web.ComprasWS.Compra> ModificarCompraAsync(Front_Web.ComprasWS.Compra ModificarCompra);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -230,6 +252,14 @@ namespace Front_Web.ComprasWS {
         
         public System.Threading.Tasks.Task<Front_Web.ComprasWS.Compra[]> ListarCompraAsync() {
             return base.Channel.ListarCompraAsync();
+        }
+        
+        public Front_Web.ComprasWS.Compra ModificarCompra(Front_Web.ComprasWS.Compra ModificarCompra1) {
+            return base.Channel.ModificarCompra(ModificarCompra1);
+        }
+        
+        public System.Threading.Tasks.Task<Front_Web.ComprasWS.Compra> ModificarCompraAsync(Front_Web.ComprasWS.Compra ModificarCompra) {
+            return base.Channel.ModificarCompraAsync(ModificarCompra);
         }
     }
 }

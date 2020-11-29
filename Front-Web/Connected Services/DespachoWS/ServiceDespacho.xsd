@@ -7,7 +7,6 @@
       <xs:element minOccurs="0" name="id_compra" type="xs:int" />
       <xs:element minOccurs="0" name="id_despacho" type="xs:int" />
       <xs:element minOccurs="0" name="id_tipo_estado" type="xs:int" />
-      <xs:element minOccurs="0" name="ubicacion" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Despacho" nillable="true" type="tns:Despacho" />

@@ -19,7 +19,6 @@ namespace Front_Web
         {
             TxtCompra.Text = "";
             TxtFecha.Text = "";
-            TxtUbicacion.Text = "";
         }
         protected void GvCompras_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -31,27 +30,29 @@ namespace Front_Web
         }
         protected void btndespachar_Click(object sender, EventArgs e)
         {
-            if (TxtUbicacion.Text == "")
-            {
-                ScriptManager.RegisterStartupScript(UpdatePanel1, UpdatePanel1.GetType(), "alerta", "alert('Ingresar Ubicación')", true);
-                TxtUbicacion.Focus();
-            }
-            else if (TxtFecha.Text == "")
+
+            if (TxtFecha.Text == "")
             {
                 ScriptManager.RegisterStartupScript(UpdatePanel1, UpdatePanel1.GetType(), "alerta", "alert('Seleccione Fecha')", true);
                 TxtFecha.Focus();
             }
             else
             {
+                ComprasWS.ServiceCompraClient servicioCompra = new ComprasWS.ServiceCompraClient();
+                servicioCompra.ModificarCompra(new ComprasWS.Compra()
+                {
+             
+                });
+
                 DespachoWS.ServiceDespachoClient servicioDespacho = new DespachoWS.ServiceDespachoClient();
                 servicioDespacho.CrearDespacho(new DespachoWS.Despacho()
                 {
-                    ubicacion = TxtUbicacion.Text.ToString(),
                     fecha = Convert.ToDateTime(TxtFecha.Text),
                     id_compra = Convert.ToInt32(TxtCompra.Text),
                     id_tipo_estado = 1,
                     estado = true
                 });
+
                 ScriptManager.RegisterStartupScript(UpdatePanel1, UpdatePanel1.GetType(), "alerta", "alert('Compra Despachada con Exito')", true);
                 Paneltabla.Visible = false;
                 Limpiar();

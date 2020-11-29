@@ -32,5 +32,7 @@ namespace Servicio_Mant
         [OperationContract]
         [WebInvoke(Method = "GET", UriTemplate = "ListarCompra", ResponseFormat = WebMessageFormat.Json)]
         List<Compra> ListarCompra();
+        [OperationContract]
+        Compra ModificarCompra(Compra ModificarCompra);
     }
 }

@@ -13,4 +13,18 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="ModificarCompra">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Servicio_Mant.Dominio" minOccurs="0" name="ModificarCompra" nillable="true" type="q2:Compra" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModificarCompraResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Servicio_Mant.Dominio" minOccurs="0" name="ModificarCompraResult" nillable="true" type="q3:Compra" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>
