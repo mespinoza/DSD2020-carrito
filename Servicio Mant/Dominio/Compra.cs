@@ -22,7 +22,10 @@ namespace Servicio_Mant.Dominio
         public int IdPersona { get; set; }
 
         [DataMember]
-        public int IdPago { get; set; }
+        public int IdTipoEstado { get; set; }
+
+        [DataMember]
+        public int IdTipoEntrega { get; set; }
 
         [DataMember]
         public Decimal DescuentoTotal { get; set; }

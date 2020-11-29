@@ -18,5 +18,12 @@ namespace Servicio_Mant
         {
             return compraDAO.ListarCompra();
         }
+
+
+
+        public Compra ModificarCompra(Compra ModificarCompra)
+        {
+            return compraDAO.ModificarCompra(ModificarCompra);
+        }
     }
 }

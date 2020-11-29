@@ -38,12 +38,7 @@
                                                             <asp:TextBox ID="TxtCompra" runat="server" enabled="false" CssClass="form-control"></asp:TextBox>
                                                         </div>
                                                           </div>
-                                                    <div class="col-md-4">
-                                                        <label class="control-label col-md-4">Ubicación:</label>
-                                                        <div class="col-md-8">
-                                                            <asp:TextBox ID="TxtUbicacion" runat="server" MaxLength="100" CssClass="form-control"></asp:TextBox>
-                                                        </div>
-                                                    </div>
+                                               
                                                      <div class="col-md-4">
                                                         <label class="control-label col-md-4">Fecha:</label>
                                                         <div class="col-md-8">
@@ -70,7 +65,8 @@
                                                                     <asp:BoundField DataField="Descripcion" HeaderText="descripcion" />
                                                                      <asp:BoundField DataField="IdCliente" HeaderText="id_cliente" />
                                                                      <asp:BoundField DataField="IdPersona" HeaderText="id_persona" />
-                                                                     <asp:BoundField DataField="IdPago" HeaderText="id_pago" />
+                                                                     <asp:BoundField DataField="IdTipoEstado" HeaderText="id_tipo_estado" />
+                                                                      <asp:BoundField DataField="IdTipoEntrega" HeaderText="id_tipo_entrega" />
                                                                      <asp:BoundField DataField="DescuentoTotal" HeaderText="descuento_total" />
                                                                      <asp:BoundField DataField="SumaTotal" HeaderText="sum_total" />
                                                                      <asp:BoundField DataField="FechaEntrega" HeaderText="fecha_entrega" />

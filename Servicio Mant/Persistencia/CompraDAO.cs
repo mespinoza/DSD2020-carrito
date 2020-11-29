@@ -25,7 +25,7 @@ namespace Servicio_Mant.Persistencia
                     comando.Parameters.Add(new SqlParameter("@descripcion", compraACrear.Descripcion));
                     comando.Parameters.Add(new SqlParameter("@idcliente", compraACrear.IdCliente));
                     comando.Parameters.Add(new SqlParameter("@idpersona", compraACrear.IdPersona));
-                    comando.Parameters.Add(new SqlParameter("@idpago", compraACrear.IdPago));
+                    //comando.Parameters.Add(new SqlParameter("@idpago", compraACrear.IdPago));
                     comando.Parameters.Add(new SqlParameter("@descuentototal", compraACrear.DescuentoTotal));
                     comando.Parameters.Add(new SqlParameter("@sumatotal", compraACrear.SumaTotal));
                     comando.Parameters.Add(new SqlParameter("@fechaentrega", compraACrear.FechaEntrega));
@@ -58,7 +58,7 @@ namespace Servicio_Mant.Persistencia
                                 Descripcion = (string)resultado["descripcion"],
                                 IdCliente = (int)resultado["id_cliente"],
                                 IdPersona = (int)resultado["id_persona"],
-                                IdPago = (int)resultado["id_pago"],
+                                //IdPago = (int)resultado["id_pago"],
                                 DescuentoTotal = (Decimal)resultado["descuento_total"],
                                 SumaTotal = (Decimal)resultado["sum_total"],
                                 FechaEntrega = Convert.ToDateTime(resultado["fecha_entrega"]),
@@ -78,7 +78,8 @@ namespace Servicio_Mant.Persistencia
                 "descripcion = @descripcion, " +
                 "id_cliente = @idcliente, " +
                 "id_persona = @idpersona, " +
-                "id_pago = @idpago, " +
+                "id_tipo_estado = @IdTipoEstado, " +
+                "id_tipo_entrega = @id_tipo_entrega, " +
                 "descuento_total = @descuentototal, " +
                 "sum_total = @sumatotal, " +
                 "fecha_entrega = @fechaentrega, " +
@@ -93,7 +94,8 @@ namespace Servicio_Mant.Persistencia
                     comando.Parameters.Add(new SqlParameter("@descripcion", compraAModificar.Descripcion));
                     comando.Parameters.Add(new SqlParameter("@idcliente", compraAModificar.IdCliente));
                     comando.Parameters.Add(new SqlParameter("@idpersona", compraAModificar.IdPersona));
-                    comando.Parameters.Add(new SqlParameter("@idpago", compraAModificar.IdPago));
+                    comando.Parameters.Add(new SqlParameter("@IdTipoEstado", compraAModificar.IdTipoEstado));
+                    comando.Parameters.Add(new SqlParameter("@id_tipo_entrega", compraAModificar.IdTipoEntrega));
                     comando.Parameters.Add(new SqlParameter("@descuentototal", compraAModificar.DescuentoTotal));
                     comando.Parameters.Add(new SqlParameter("@sumatotal", compraAModificar.SumaTotal));
                     comando.Parameters.Add(new SqlParameter("@fechaentrega", compraAModificar.FechaEntrega));
@@ -139,7 +141,7 @@ namespace Servicio_Mant.Persistencia
                                 Descripcion = (string)resultado["descripcion"],
                                 IdCliente = (int)resultado["id_cliente"],
                                 IdPersona = (int)resultado["id_persona"],
-                                IdPago = (int)resultado["id_pago"],
+                                //IdPago = (int)resultado["id_pago"],
                                 DescuentoTotal = (Decimal)resultado["descuento_total"],
                                 SumaTotal = (Decimal)resultado["sum_total"],
                                 FechaEntrega = Convert.ToDateTime(resultado["fecha_entrega"]),
@@ -171,8 +173,9 @@ namespace Servicio_Mant.Persistencia
                                 IdCompra = (int)resultado["id_compra"],
                                 Descripcion = (string)resultado["descripcion"],
                                 IdCliente = (int)resultado["id_cliente"],
-                                IdPersona = (int)resultado["id_persona"],
-                                IdPago = (int)resultado["id_pago"],
+                                IdPersona = (int)resultado["id_personal"],
+                                IdTipoEstado = (int)resultado["id_tipo_estado"],
+                                IdTipoEntrega = (int)resultado["id_tipo_entrega"],
                                 DescuentoTotal = (decimal)resultado["descuento_total"],
                                 SumaTotal = (decimal)resultado["sum_total"],
                                 FechaEntrega = (DateTime)resultado["fecha_entrega"],

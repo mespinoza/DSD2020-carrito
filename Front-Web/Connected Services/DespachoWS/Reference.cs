@@ -37,9 +37,6 @@ namespace Front_Web.DespachoWS {
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int id_tipo_estadoField;
         
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ubicacionField;
-        
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
             get {
@@ -111,19 +108,6 @@ namespace Front_Web.DespachoWS {
                 if ((this.id_tipo_estadoField.Equals(value) != true)) {
                     this.id_tipo_estadoField = value;
                     this.RaisePropertyChanged("id_tipo_estado");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ubicacion {
-            get {
-                return this.ubicacionField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ubicacionField, value) != true)) {
-                    this.ubicacionField = value;
-                    this.RaisePropertyChanged("ubicacion");
                 }
             }
         }

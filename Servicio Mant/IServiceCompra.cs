@@ -14,5 +14,7 @@ namespace Servicio_Mant
     {
         [OperationContract]
         List<Compra> ListarCompra();
+        [OperationContract]
+        Compra ModificarCompra(Compra ModificarCompra);
     }
 }
