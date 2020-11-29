@@ -19,10 +19,13 @@ namespace Servicio_Mant.Dominio
         public int IdCliente { get; set; }
 
         [DataMember]
-        public int IdPersona { get; set; }
+        public int IdPersonal { get; set; }
 
         [DataMember]
-        public int IdPago { get; set; }
+        public int IdTipoEstado { get; set; }
+
+        [DataMember]
+        public int IdTipoEntrega { get; set; }
 
         [DataMember]
         public Decimal DescuentoTotal { get; set; }

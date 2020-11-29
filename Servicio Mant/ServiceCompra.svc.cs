@@ -14,9 +14,30 @@ namespace Servicio_Mant
     public class ServiceCompra : IServiceCompra
     {
         private CompraDAO compraDAO = new CompraDAO();
+
+        public Compra CrearCompra(Compra compraACrear)
+        {
+            return compraDAO.CrearCompra(compraACrear);
+        }
+
+        public void EliminarCompra(int idcompra)
+        {
+            compraDAO.EliminarCompra(idcompra);
+        }
+
         public List<Compra> ListarCompra()
         {
             return compraDAO.ListarCompra();
+        }
+
+        public Compra ModificarCompra(Compra compraAModificar)
+        {
+            return compraDAO.ModificarCompra(compraAModificar);
+        }
+
+        public Compra ObtenerCompra(int idcompra)
+        {
+            return compraDAO.ObtenerCompra(idcompra);
         }
     }
 }

@@ -14,7 +14,7 @@ namespace Servicio_Mant.Persistencia
         {
             Compra compraCreada = null;
             string sql = "INSERT INTO Compra VALUES (@descripcion, @idcliente, " +
-                                "@idpersona, @idpago, @descuentototal, " +
+                                "@idpersonal, @idtipoestado, @idtipoentrega, @descuentototal, " +
                                 "@sumatotal, @fechaentrega, @estado)";
             using (SqlConnection conexion = new SqlConnection(cadenaConexion))
             {
@@ -24,8 +24,9 @@ namespace Servicio_Mant.Persistencia
                     comando.Parameters.Add(new SqlParameter("@idcompra", compraACrear.IdCompra));
                     comando.Parameters.Add(new SqlParameter("@descripcion", compraACrear.Descripcion));
                     comando.Parameters.Add(new SqlParameter("@idcliente", compraACrear.IdCliente));
-                    comando.Parameters.Add(new SqlParameter("@idpersona", compraACrear.IdPersona));
-                    comando.Parameters.Add(new SqlParameter("@idpago", compraACrear.IdPago));
+                    comando.Parameters.Add(new SqlParameter("@idpersonal", compraACrear.IdPersonal));
+                    comando.Parameters.Add(new SqlParameter("@idtipoestado", compraACrear.IdTipoEstado));
+                    comando.Parameters.Add(new SqlParameter("@idtipoentrega", compraACrear.IdTipoEntrega));
                     comando.Parameters.Add(new SqlParameter("@descuentototal", compraACrear.DescuentoTotal));
                     comando.Parameters.Add(new SqlParameter("@sumatotal", compraACrear.SumaTotal));
                     comando.Parameters.Add(new SqlParameter("@fechaentrega", compraACrear.FechaEntrega));
@@ -57,8 +58,9 @@ namespace Servicio_Mant.Persistencia
                                 IdCompra = (int)resultado["id_compra"],
                                 Descripcion = (string)resultado["descripcion"],
                                 IdCliente = (int)resultado["id_cliente"],
-                                IdPersona = (int)resultado["id_persona"],
-                                IdPago = (int)resultado["id_pago"],
+                                IdPersonal = (int)resultado["id_personal"],
+                                IdTipoEstado = (int)resultado["id_tipo_estado"],
+                                IdTipoEntrega = (int)resultado["id_tipo_entrega"],
                                 DescuentoTotal = (Decimal)resultado["descuento_total"],
                                 SumaTotal = (Decimal)resultado["sum_total"],
                                 FechaEntrega = Convert.ToDateTime(resultado["fecha_entrega"]),
@@ -77,8 +79,9 @@ namespace Servicio_Mant.Persistencia
             string sql = "UPDATE Compra SET " +
                 "descripcion = @descripcion, " +
                 "id_cliente = @idcliente, " +
-                "id_persona = @idpersona, " +
-                "id_pago = @idpago, " +
+                "id_personal = @idpersonal, " +
+                "id_tipo_estado = @idtipoestado, " +
+                "id_tipo_entrega = @idtipoentrega, " +
                 "descuento_total = @descuentototal, " +
                 "sum_total = @sumatotal, " +
                 "fecha_entrega = @fechaentrega, " +
@@ -92,8 +95,9 @@ namespace Servicio_Mant.Persistencia
                     comando.Parameters.Add(new SqlParameter("@idcompra", compraAModificar.IdCompra));
                     comando.Parameters.Add(new SqlParameter("@descripcion", compraAModificar.Descripcion));
                     comando.Parameters.Add(new SqlParameter("@idcliente", compraAModificar.IdCliente));
-                    comando.Parameters.Add(new SqlParameter("@idpersona", compraAModificar.IdPersona));
-                    comando.Parameters.Add(new SqlParameter("@idpago", compraAModificar.IdPago));
+                    comando.Parameters.Add(new SqlParameter("@idpersonal", compraAModificar.IdPersonal));
+                    comando.Parameters.Add(new SqlParameter("@idtipoestado", compraAModificar.IdTipoEstado));
+                    comando.Parameters.Add(new SqlParameter("@idtipoentrega", compraAModificar.IdTipoEntrega));
                     comando.Parameters.Add(new SqlParameter("@descuentototal", compraAModificar.DescuentoTotal));
                     comando.Parameters.Add(new SqlParameter("@sumatotal", compraAModificar.SumaTotal));
                     comando.Parameters.Add(new SqlParameter("@fechaentrega", compraAModificar.FechaEntrega));
@@ -138,8 +142,9 @@ namespace Servicio_Mant.Persistencia
                                 IdCompra = (int)resultado["id_compra"],
                                 Descripcion = (string)resultado["descripcion"],
                                 IdCliente = (int)resultado["id_cliente"],
-                                IdPersona = (int)resultado["id_persona"],
-                                IdPago = (int)resultado["id_pago"],
+                                IdPersonal = (int)resultado["id_personal"],
+                                IdTipoEstado = (int)resultado["id_tipo_estado"],
+                                IdTipoEntrega = (int)resultado["id_tipo_entrega"],
                                 DescuentoTotal = (Decimal)resultado["descuento_total"],
                                 SumaTotal = (Decimal)resultado["sum_total"],
                                 FechaEntrega = Convert.ToDateTime(resultado["fecha_entrega"]),
@@ -171,11 +176,12 @@ namespace Servicio_Mant.Persistencia
                                 IdCompra = (int)resultado["id_compra"],
                                 Descripcion = (string)resultado["descripcion"],
                                 IdCliente = (int)resultado["id_cliente"],
-                                IdPersona = (int)resultado["id_persona"],
-                                IdPago = (int)resultado["id_pago"],
-                                DescuentoTotal = (decimal)resultado["descuento_total"],
-                                SumaTotal = (decimal)resultado["sum_total"],
-                                FechaEntrega = (DateTime)resultado["fecha_entrega"],
+                                IdPersonal = (int)resultado["id_personal"],
+                                IdTipoEstado = (int)resultado["id_tipo_estado"],
+                                IdTipoEntrega = (int)resultado["id_tipo_entrega"],
+                                DescuentoTotal = (Decimal)resultado["descuento_total"],
+                                SumaTotal = (Decimal)resultado["sum_total"],
+                                FechaEntrega = Convert.ToDateTime(resultado["fecha_entrega"]),
                                 Estado = (Boolean)resultado["estado"]
                             };
                             ComprasEncontrados.Add(CompraEncontrado);
