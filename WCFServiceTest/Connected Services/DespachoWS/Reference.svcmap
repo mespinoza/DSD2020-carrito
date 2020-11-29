@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="3b4e5dbd-044f-4ae6-98c6-4c999a31f5a4" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:53331/ServiceDespacho.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ServiceDespacho.xsd" MetadataType="Schema" ID="50c9246b-1e46-4b7f-97a4-6de6fa83b074" SourceId="1" SourceUrl="http://localhost:53331/ServiceDespacho.svc?xsd=xsd2" />
+    <MetadataFile FileName="ServiceDespacho1.xsd" MetadataType="Schema" ID="22f0a903-5985-459b-8d53-41908f1a11aa" SourceId="1" SourceUrl="http://localhost:53331/ServiceDespacho.svc?xsd=xsd3" />
+    <MetadataFile FileName="ServiceDespacho2.xsd" MetadataType="Schema" ID="5a3911f7-8d0f-4e4c-9004-d09fc24caecf" SourceId="1" SourceUrl="http://localhost:53331/ServiceDespacho.svc?xsd=xsd0" />
+    <MetadataFile FileName="ServiceDespacho.wsdl" MetadataType="Wsdl" ID="4a4c3e24-622b-4b5e-a860-d8c003380843" SourceId="1" SourceUrl="http://localhost:53331/ServiceDespacho.svc?wsdl" />
+    <MetadataFile FileName="ServiceDespacho3.xsd" MetadataType="Schema" ID="6559eda0-5be5-4bd9-a32f-557acf016840" SourceId="1" SourceUrl="http://localhost:53331/ServiceDespacho.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
