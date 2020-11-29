@@ -19,6 +19,7 @@ namespace Front_Web
         {
             TxtCompra.Text = "";
             TxtFecha.Text = "";
+            LblDireccion.Visible = false;
         }
         protected void GvCompras_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -28,7 +29,8 @@ namespace Front_Web
             Limpiar();
             TxtCompra.Text = Server.HtmlDecode(this.GvCompras.Rows[this.GvCompras.SelectedIndex].Cells[1].Text);
         }
-        protected void btndespachar_Click(object sender, EventArgs e)
+    
+            protected void btndespachar_Click(object sender, EventArgs e)
         {
 
             if (TxtFecha.Text == "")
@@ -38,11 +40,11 @@ namespace Front_Web
             }
             else
             {
-                ComprasWS.ServiceCompraClient servicioCompra = new ComprasWS.ServiceCompraClient();
-                servicioCompra.ModificarCompra(new ComprasWS.Compra()
-                {
+                //ComprasWS.ServiceCompraClient servicioCompra = new ComprasWS.ServiceCompraClient();
+                //servicioCompra.ModificarCompra(new ComprasWS.Compra()
+                //{
              
-                });
+                //});
 
                 DespachoWS.ServiceDespachoClient servicioDespacho = new DespachoWS.ServiceDespachoClient();
                 servicioDespacho.CrearDespacho(new DespachoWS.Despacho()
@@ -65,6 +67,11 @@ namespace Front_Web
             btncancelar.Visible = false;
             btndespachar.Visible = false;
             Paneltabla.Visible = false;
+        }
+        protected void BtnUbicacion_Click(object sender, EventArgs e)
+        {
+            LblDireccion.Visible = true;
+            LblDireccion.Text = "Dirección Referencia >>> "  + TxtDireccion.Text;
         }
     }
 }
