@@ -10,9 +10,10 @@ namespace Servicio_Mant.Dominio
     public class Usuarioc
     {
         [DataMember]
-        public string Cusuario { get; set; }
-
+        public int idusuario { get; set; }
         [DataMember]
-        public string Ccontrasena { get; set; }
+        public string Cusuario { get; set; }
+        [DataMember]
+        public string descripcion { get; set; }
     }
 }
