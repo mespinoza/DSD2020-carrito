@@ -123,7 +123,7 @@ namespace Servicio_Mant.Persistencia
             }
         }
 
-        public List<Compra> ListarCompras()
+        public List<Compra> ListarCompra()
         {
             List<Compra> comprasEncontradas = new List<Compra>();
             Compra compraEncontrada = null;
@@ -157,40 +157,6 @@ namespace Servicio_Mant.Persistencia
             }
             return comprasEncontradas;
         }
-        public List<Compra> ListarCompra()
-        {
-            List<Compra> ComprasEncontrados = new List<Compra>();
-            Compra CompraEncontrado = null;
-            string sql = "SELECT * from Compra";
-            using (SqlConnection conexion = new SqlConnection(cadenaConexion))
-            {
-                conexion.Open();
-                using (SqlCommand comando = new SqlCommand(sql, conexion))
-                {
-                    using (SqlDataReader resultado = comando.ExecuteReader())
-                    {
-                        while (resultado.Read())
-                        {
-                            CompraEncontrado = new Compra()
-                            {
-                                IdCompra = (int)resultado["id_compra"],
-                                Descripcion = (string)resultado["descripcion"],
-                                IdCliente = (int)resultado["id_cliente"],
-                                IdPersonal = (int)resultado["id_personal"],
-                                IdTipoEstado = (int)resultado["id_tipo_estado"],
-                                IdTipoEntrega = (int)resultado["id_tipo_entrega"],
-                                DescuentoTotal = (Decimal)resultado["descuento_total"],
-                                SumaTotal = (Decimal)resultado["sum_total"],
-                                FechaEntrega = Convert.ToDateTime(resultado["fecha_entrega"]),
-                                Estado = (Boolean)resultado["estado"]
-                            };
-                            ComprasEncontrados.Add(CompraEncontrado);
-                        }
-                    }
-                }
-                return ComprasEncontrados;
-            }
-
-        }
+       
     }
 }
