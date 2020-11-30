@@ -27,6 +27,6 @@ namespace Servicio_Mant
 
         [OperationContract]
         List<Compra> ListarCompra();
-        [OperationContract]
+  
     }
 }
