@@ -35,5 +35,6 @@ namespace Front_Web
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, UpdatePanel1.GetType(), "alerta", "alert('Compra Registrada con Exito')", true);
         }
+
     }
 }
