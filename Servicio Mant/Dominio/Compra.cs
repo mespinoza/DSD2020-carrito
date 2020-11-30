@@ -19,7 +19,7 @@ namespace Servicio_Mant.Dominio
         public int IdCliente { get; set; }
 
         [DataMember]
-        public int IdPersona { get; set; }
+        public int IdPersonal { get; set; }
 
         [DataMember]
         public int IdTipoEstado { get; set; }
