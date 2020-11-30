@@ -24,22 +24,22 @@ namespace Front_Web
         protected global::System.Web.UI.UpdatePanel UpdatePanel1;
 
         /// <summary>
-        /// Control LinkButton1.
+        /// Control BtnNuevo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton1;
+        protected global::System.Web.UI.WebControls.LinkButton BtnNuevo;
 
         /// <summary>
-        /// Control btndespachar.
+        /// Control BtnGrabar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btndespachar;
+        protected global::System.Web.UI.WebControls.LinkButton BtnGrabar;
 
         /// <summary>
         /// Control btncancelar.
@@ -60,13 +60,13 @@ namespace Front_Web
         protected global::System.Web.UI.WebControls.Panel Paneltabla;
 
         /// <summary>
-        /// Control TxtCompra.
+        /// Control TxtDescripcion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtCompra;
+        protected global::System.Web.UI.WebControls.TextBox TxtDescripcion;
 
         /// <summary>
         /// Control DDLCategoria.
@@ -78,31 +78,22 @@ namespace Front_Web
         protected global::System.Web.UI.WebControls.DropDownList DDLCategoria;
 
         /// <summary>
-        /// Control DDLUnidadMedida.
+        /// Control TxtStock.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DDLUnidadMedida;
+        protected global::System.Web.UI.WebControls.TextBox TxtStock;
 
         /// <summary>
-        /// Control TextBox1.
+        /// Control txtPRecio.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
-
-        /// <summary>
-        /// Control TextBox2.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.TextBox txtPRecio;
 
         /// <summary>
         /// Control DropDownList2.
@@ -114,12 +105,12 @@ namespace Front_Web
         protected global::System.Web.UI.WebControls.DropDownList DropDownList2;
 
         /// <summary>
-        /// Control GvCompras.
+        /// Control GvArticulos.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GvCompras;
+        protected global::System.Web.UI.WebControls.GridView GvArticulos;
     }
 }

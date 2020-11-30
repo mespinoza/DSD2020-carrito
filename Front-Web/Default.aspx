@@ -36,4 +36,24 @@
             </p>
         </div>
     </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h3 class="form-section">Articulos Ofertas COMPRE YAAAA!!!!!</h3>
+            <div class="form-horizontal">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="table-responsive">
+                            <asp:GridView ID="GvArticulos" runat="server" AutoGenerateSelectButton="true" AutoGenerateColumns="true" class="table table-striped table-bordered table-hover" Width="100%">
+                                <Columns>
+
+                                </Columns>
+                            </asp:GridView>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 </asp:Content>

@@ -23,6 +23,9 @@ namespace Front_Web
             {
                 lblUsuario.Text = usuario.Cusuario;
             }
+            ArticuloWS.ServiceArticuloClient servicioArticulos = new ArticuloWS.ServiceArticuloClient();
+            GvArticulos.DataSource = servicioArticulos.ListaArticulos();
+            GvArticulos.DataBind();
 
         }
 

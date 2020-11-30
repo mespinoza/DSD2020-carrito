@@ -13,7 +13,7 @@ namespace Servicio_Mant.Persistencia
         public Articulo crear(Articulo articuloCrear)
         {
             Articulo articuloNuevo = null;
-            string query = "insert dbo.Articulo(descripcion,id_categoria,id_unidad_medida,stock,precio,estado) values(@Descripcion,@IdCategoria,@IdUnidadMedida,@Stock,@Precio,@Estado)";
+            string query = "insert dbo.Articulo(descripcion,id_categoria,stock,precio,estado) values(@Descripcion,@IdCategoria,@Stock,@Precio,@Estado)";
             using(SqlConnection con=new SqlConnection(cadenaConexion))
             {
                 con.Open();
@@ -22,7 +22,6 @@ namespace Servicio_Mant.Persistencia
                     //cmd.Parameters.Add(new SqlParameter("@IdArticulo", articuloCrear.idArticulo));
                     cmd.Parameters.Add(new SqlParameter("@Descripcion", articuloCrear.descArticulo));
                     cmd.Parameters.Add(new SqlParameter("@IdCategoria", articuloCrear.idCategoria));
-                    cmd.Parameters.Add(new SqlParameter("@IdUnidadMedida", articuloCrear.idUnidadMedida));
                     cmd.Parameters.Add(new SqlParameter("@Stock", articuloCrear.stock));
                     cmd.Parameters.Add(new SqlParameter("@Precio", articuloCrear.precio));
                     cmd.Parameters.Add(new SqlParameter("@Estado", articuloCrear.estado));

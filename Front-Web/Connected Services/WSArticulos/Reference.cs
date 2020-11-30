@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Front_Web.ArticuloWS {
+namespace Front_Web.WSArticulos {
     using System.Runtime.Serialization;
     using System;
     
@@ -154,26 +154,26 @@ namespace Front_Web.ArticuloWS {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ArticuloWS.IServiceArticulo")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="WSArticulos.IServiceArticulo")]
     public interface IServiceArticulo {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceArticulo/CrearArticulo", ReplyAction="http://tempuri.org/IServiceArticulo/CrearArticuloResponse")]
-        Front_Web.ArticuloWS.Articulo CrearArticulo(Front_Web.ArticuloWS.Articulo articulo);
+        Front_Web.WSArticulos.Articulo CrearArticulo(Front_Web.WSArticulos.Articulo articulo);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceArticulo/CrearArticulo", ReplyAction="http://tempuri.org/IServiceArticulo/CrearArticuloResponse")]
-        System.Threading.Tasks.Task<Front_Web.ArticuloWS.Articulo> CrearArticuloAsync(Front_Web.ArticuloWS.Articulo articulo);
+        System.Threading.Tasks.Task<Front_Web.WSArticulos.Articulo> CrearArticuloAsync(Front_Web.WSArticulos.Articulo articulo);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceArticulo/ObtenerArticulo", ReplyAction="http://tempuri.org/IServiceArticulo/ObtenerArticuloResponse")]
-        Front_Web.ArticuloWS.Articulo ObtenerArticulo(int IdArticulo);
+        Front_Web.WSArticulos.Articulo ObtenerArticulo(int IdArticulo);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceArticulo/ObtenerArticulo", ReplyAction="http://tempuri.org/IServiceArticulo/ObtenerArticuloResponse")]
-        System.Threading.Tasks.Task<Front_Web.ArticuloWS.Articulo> ObtenerArticuloAsync(int IdArticulo);
+        System.Threading.Tasks.Task<Front_Web.WSArticulos.Articulo> ObtenerArticuloAsync(int IdArticulo);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceArticulo/ModificarArticulo", ReplyAction="http://tempuri.org/IServiceArticulo/ModificarArticuloResponse")]
-        Front_Web.ArticuloWS.Articulo ModificarArticulo(Front_Web.ArticuloWS.Articulo articulo);
+        Front_Web.WSArticulos.Articulo ModificarArticulo(Front_Web.WSArticulos.Articulo articulo);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceArticulo/ModificarArticulo", ReplyAction="http://tempuri.org/IServiceArticulo/ModificarArticuloResponse")]
-        System.Threading.Tasks.Task<Front_Web.ArticuloWS.Articulo> ModificarArticuloAsync(Front_Web.ArticuloWS.Articulo articulo);
+        System.Threading.Tasks.Task<Front_Web.WSArticulos.Articulo> ModificarArticuloAsync(Front_Web.WSArticulos.Articulo articulo);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceArticulo/EliminarArticulo", ReplyAction="http://tempuri.org/IServiceArticulo/EliminarArticuloResponse")]
         void EliminarArticulo(int IdArticulo);
@@ -182,19 +182,19 @@ namespace Front_Web.ArticuloWS {
         System.Threading.Tasks.Task EliminarArticuloAsync(int IdArticulo);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceArticulo/ListaArticulos", ReplyAction="http://tempuri.org/IServiceArticulo/ListaArticulosResponse")]
-        Front_Web.ArticuloWS.Articulo[] ListaArticulos();
+        Front_Web.WSArticulos.Articulo[] ListaArticulos();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceArticulo/ListaArticulos", ReplyAction="http://tempuri.org/IServiceArticulo/ListaArticulosResponse")]
-        System.Threading.Tasks.Task<Front_Web.ArticuloWS.Articulo[]> ListaArticulosAsync();
+        System.Threading.Tasks.Task<Front_Web.WSArticulos.Articulo[]> ListaArticulosAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IServiceArticuloChannel : Front_Web.ArticuloWS.IServiceArticulo, System.ServiceModel.IClientChannel {
+    public interface IServiceArticuloChannel : Front_Web.WSArticulos.IServiceArticulo, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class ServiceArticuloClient : System.ServiceModel.ClientBase<Front_Web.ArticuloWS.IServiceArticulo>, Front_Web.ArticuloWS.IServiceArticulo {
+    public partial class ServiceArticuloClient : System.ServiceModel.ClientBase<Front_Web.WSArticulos.IServiceArticulo>, Front_Web.WSArticulos.IServiceArticulo {
         
         public ServiceArticuloClient() {
         }
@@ -215,27 +215,27 @@ namespace Front_Web.ArticuloWS {
                 base(binding, remoteAddress) {
         }
         
-        public Front_Web.ArticuloWS.Articulo CrearArticulo(Front_Web.ArticuloWS.Articulo articulo) {
+        public Front_Web.WSArticulos.Articulo CrearArticulo(Front_Web.WSArticulos.Articulo articulo) {
             return base.Channel.CrearArticulo(articulo);
         }
         
-        public System.Threading.Tasks.Task<Front_Web.ArticuloWS.Articulo> CrearArticuloAsync(Front_Web.ArticuloWS.Articulo articulo) {
+        public System.Threading.Tasks.Task<Front_Web.WSArticulos.Articulo> CrearArticuloAsync(Front_Web.WSArticulos.Articulo articulo) {
             return base.Channel.CrearArticuloAsync(articulo);
         }
         
-        public Front_Web.ArticuloWS.Articulo ObtenerArticulo(int IdArticulo) {
+        public Front_Web.WSArticulos.Articulo ObtenerArticulo(int IdArticulo) {
             return base.Channel.ObtenerArticulo(IdArticulo);
         }
         
-        public System.Threading.Tasks.Task<Front_Web.ArticuloWS.Articulo> ObtenerArticuloAsync(int IdArticulo) {
+        public System.Threading.Tasks.Task<Front_Web.WSArticulos.Articulo> ObtenerArticuloAsync(int IdArticulo) {
             return base.Channel.ObtenerArticuloAsync(IdArticulo);
         }
         
-        public Front_Web.ArticuloWS.Articulo ModificarArticulo(Front_Web.ArticuloWS.Articulo articulo) {
+        public Front_Web.WSArticulos.Articulo ModificarArticulo(Front_Web.WSArticulos.Articulo articulo) {
             return base.Channel.ModificarArticulo(articulo);
         }
         
-        public System.Threading.Tasks.Task<Front_Web.ArticuloWS.Articulo> ModificarArticuloAsync(Front_Web.ArticuloWS.Articulo articulo) {
+        public System.Threading.Tasks.Task<Front_Web.WSArticulos.Articulo> ModificarArticuloAsync(Front_Web.WSArticulos.Articulo articulo) {
             return base.Channel.ModificarArticuloAsync(articulo);
         }
         
@@ -247,11 +247,11 @@ namespace Front_Web.ArticuloWS {
             return base.Channel.EliminarArticuloAsync(IdArticulo);
         }
         
-        public Front_Web.ArticuloWS.Articulo[] ListaArticulos() {
+        public Front_Web.WSArticulos.Articulo[] ListaArticulos() {
             return base.Channel.ListaArticulos();
         }
         
-        public System.Threading.Tasks.Task<Front_Web.ArticuloWS.Articulo[]> ListaArticulosAsync() {
+        public System.Threading.Tasks.Task<Front_Web.WSArticulos.Articulo[]> ListaArticulosAsync() {
             return base.Channel.ListaArticulosAsync();
         }
     }
