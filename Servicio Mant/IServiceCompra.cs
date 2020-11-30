@@ -14,28 +14,22 @@ namespace Servicio_Mant
     public interface IServiceCompra
     {
         [OperationContract]
-        [WebInvoke(Method = "POST", UriTemplate = "CrearCompra", ResponseFormat = WebMessageFormat.Json)]
         Compra CrearCompra(Compra compraACrear);
 
         [OperationContract]
-        [WebInvoke(Method = "GET", UriTemplate = "ObtenerCompra/{idcompra}", ResponseFormat = WebMessageFormat.Json)]
         Compra ObtenerCompra(int idcompra);
 
         [OperationContract]
-        [WebInvoke(Method = "PUT", UriTemplate = "CompraModif", ResponseFormat = WebMessageFormat.Json)]
         Compra ModificarCompra(Compra compraAModificar);
 
 
 
 
         [OperationContract]
-        [WebInvoke(Method = "DELETE", UriTemplate = "CompraElim/{idcompra}", ResponseFormat = WebMessageFormat.Json)]
         void EliminarCompra(int idcompra);
 
         [OperationContract]
-        [WebInvoke(Method = "GET", UriTemplate = "ListarCompra", ResponseFormat = WebMessageFormat.Json)]
         List<Compra> ListarCompra();
-        [OperationContract]
-        Compra ModificarCompra(Compra ModificarCompra);
+
     }
 }

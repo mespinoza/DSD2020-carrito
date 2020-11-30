@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Servicio_Mant.Dominio" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Servicio_Mant.Dominio" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:complexType name="ArrayOfCompra">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="Compra" nillable="true" type="tns:Compra" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfCompra" nillable="true" type="tns:ArrayOfCompra" />
   <xs:complexType name="Compra">
     <xs:sequence>
       <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
@@ -14,11 +8,17 @@
       <xs:element minOccurs="0" name="FechaEntrega" type="xs:dateTime" />
       <xs:element minOccurs="0" name="IdCliente" type="xs:int" />
       <xs:element minOccurs="0" name="IdCompra" type="xs:int" />
-      <xs:element minOccurs="0" name="IdPersona" type="xs:int" />
+      <xs:element minOccurs="0" name="IdPersonal" type="xs:int" />
       <xs:element minOccurs="0" name="IdTipoEntrega" type="xs:int" />
       <xs:element minOccurs="0" name="IdTipoEstado" type="xs:int" />
       <xs:element minOccurs="0" name="SumaTotal" type="xs:decimal" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Compra" nillable="true" type="tns:Compra" />
+  <xs:complexType name="ArrayOfCompra">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Compra" nillable="true" type="tns:Compra" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCompra" nillable="true" type="tns:ArrayOfCompra" />
 </xs:schema>
