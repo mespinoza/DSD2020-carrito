@@ -17,17 +17,17 @@ namespace Servicio_Mant
         private usuarioDAO Usuariodao = new usuarioDAO();//este es nuevo
         public Usuarioc ObtenerUsuario(string Iusua, string Icontra)
         {
-            if (Usuariodao.Sb_usuario_obtener(Iusua, Icontra) == null)
-            {
-                throw new FaultException<UsuarioExecepcion>(
-                     new UsuarioExecepcion()
-                     {
-                         Codigo = "102",
-                         Descripcion = "El usuario no existe"
-                     },
-                     new FaultReason("Error al intentar obtener usuario")
-                );
-            }
+            //if (Usuariodao.Sb_usuario_obtener(Iusua, Icontra) == null)
+            //{
+            //    throw new FaultException<UsuarioExecepcion>(
+            //         new UsuarioExecepcion()
+            //         {
+            //             Codigo = "102",
+            //             Descripcion = "El usuario no existe"
+            //         },
+            //         new FaultReason("Error al intentar obtener usuario")
+            //    );
+            //}
 
             return Usuariodao.Sb_usuario_obtener(Iusua, Icontra);
         }

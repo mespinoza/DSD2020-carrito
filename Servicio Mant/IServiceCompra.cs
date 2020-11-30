@@ -25,6 +25,9 @@ namespace Servicio_Mant
         [WebInvoke(Method = "PUT", UriTemplate = "CompraModif", ResponseFormat = WebMessageFormat.Json)]
         Compra ModificarCompra(Compra compraAModificar);
 
+
+
+
         [OperationContract]
         [WebInvoke(Method = "DELETE", UriTemplate = "CompraElim/{idcompra}", ResponseFormat = WebMessageFormat.Json)]
         void EliminarCompra(int idcompra);
