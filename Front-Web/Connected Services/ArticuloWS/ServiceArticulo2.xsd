@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:53331/ServiceArticulo.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Servicio_Mant.Dominio" />
+  <xs:element name="CrearArticulo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Servicio_Mant.Dominio" minOccurs="0" name="articulo" nillable="true" type="q1:Articulo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CrearArticuloResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Servicio_Mant.Dominio" minOccurs="0" name="CrearArticuloResult" nillable="true" type="q2:Articulo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerArticulo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdArticulo" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerArticuloResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Servicio_Mant.Dominio" minOccurs="0" name="ObtenerArticuloResult" nillable="true" type="q3:Articulo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModificarArticulo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Servicio_Mant.Dominio" minOccurs="0" name="articulo" nillable="true" type="q4:Articulo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModificarArticuloResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Servicio_Mant.Dominio" minOccurs="0" name="ModificarArticuloResult" nillable="true" type="q5:Articulo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EliminarArticulo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdArticulo" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EliminarArticuloResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListaArticulos">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListaArticulosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Servicio_Mant.Dominio" minOccurs="0" name="ListaArticulosResult" nillable="true" type="q6:ArrayOfArticulo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

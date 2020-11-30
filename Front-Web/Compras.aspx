@@ -15,10 +15,7 @@
                           <br />
                                 <div class="inputs">
                                     <div class="btn-group btn-group-circle">
-                                         <asp:LinkButton ID="LinkButton1" runat="server" Text="  Nuevo" Visible="true" CssClass="btn btn-default" />
-                                        <asp:LinkButton ID="btndespachar" runat="server" Text="  Modificar" Visible="true" CssClass="btn btn-default" />
-                                        <asp:LinkButton ID="btncancelar" runat="server" Text="  Cancelar" Visible="true" CssClass="btn btn-default" />
-                                        
+                                         <asp:LinkButton ID="btnGrabar" runat="server" Text="  Grabar" Visible="true" CssClass="btn btn-default"  OnClick="BtnGrabar_Click"/>                                        
                                     </div>
                                 </div>
                             </div>
@@ -42,7 +39,7 @@
                                                         </div>
                                                     </div>
                                                      <div class="col-md-4">
-                                                     <label class="control-label col-md-4">CUPO:</label>
+                                                     <label class="control-label col-md-4">Descripción Compra:</label>
                                                         <div class="col-md-8">
                                                              <asp:TextBox ID="TxtCupo" runat="server" enabled="true" CssClass="form-control"></asp:TextBox>
                                                         </div>
@@ -62,10 +59,20 @@
                                                 <div class="row">
                                                     <div class="col-md-12">
                                                         <div class="table-responsive">
-                                                            <asp:GridView ID="GvArticulos" runat="server" AutoGenerateSelectButton="false" AutoGenerateColumns="false" class="table table-striped table-bordered table-hover" Width="100%" >
-                                                                <Columns>    
-                                                         
-                                                                </Columns>
+                                                            <asp:GridView ID="GvArticulos" 
+                                                                runat="server" 
+                                                                AutoGenerateSelectButton="true" 
+                                                                AutoGenerateColumns="false" 
+                                                                class="table table-striped table-bordered table-hover" 
+                                                                Width="100%" >
+                                                                <Columns>
+                                                                <asp:BoundField DataField="IdArticulo" HeaderText="id_articulo" />
+                                                                <asp:BoundField DataField="descArticulo" HeaderText="descripcion" />
+                                                                <asp:BoundField DataField="IdCategoria" HeaderText="id_categoria" />
+                                                                <asp:BoundField DataField="Stock" HeaderText="stock" />
+                                                                <asp:BoundField DataField="Precio" HeaderText="precio" />                                                               
+                                                                <asp:BoundField DataField="Estado" HeaderText="estado" />
+                                                            </Columns>
                                                             </asp:GridView>
                                                         </div>
                                                     </div>
@@ -80,7 +87,7 @@
                         </div>
                     </ContentTemplate>
                     <Triggers>
-                   
+                        <asp:AsyncPostBackTrigger ControlID="btnGrabar" EventName="Click" />
  
                     </Triggers>
                 </asp:UpdatePanel>
