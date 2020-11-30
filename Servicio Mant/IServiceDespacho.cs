@@ -20,5 +20,6 @@ namespace Servicio_Mant
         Despacho ObtenerDespacho(int id_compra);
         [OperationContract]
         List<Despacho> ListarDespachos();
+
     }
 }
