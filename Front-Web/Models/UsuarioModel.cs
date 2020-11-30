@@ -10,5 +10,6 @@ namespace Front_Web.Models
         public int idusuario { get; set; }
         public string Cusuario { get; set; }
         public string descripcion { get; set; }
+        //add
     }
 }
