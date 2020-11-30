@@ -102,13 +102,11 @@
                 </div>
                 <!-- /.modal -->
             </div>
-            <div class="col-md-8">
-                
+            <div class="col-md-8">                
                 <div class="col-md-8">
                     <strong><asp:Label ID="LblDireccion" runat="server" Text="" Visible="false" ></asp:Label></strong>
                 </div>
             </div>
-
         </div>
     </div>
     <!--BEGIN TABS-->
