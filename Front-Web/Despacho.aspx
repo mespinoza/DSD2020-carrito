@@ -170,7 +170,7 @@
                                                                 <asp:BoundField DataField="IdCompra" HeaderText="id_compra" />
                                                                 <asp:BoundField DataField="Descripcion" HeaderText="descripcion" />
                                                                 <asp:BoundField DataField="IdCliente" HeaderText="id_cliente" />
-                                                                <asp:BoundField DataField="IdPersona" HeaderText="id_persona" />
+                                                                <asp:BoundField DataField="IdPersonal" HeaderText="id_persona" />
                                                                 <asp:BoundField DataField="IdTipoEstado" HeaderText="id_tipo_estado" />
                                                                 <asp:BoundField DataField="IdTipoEntrega" HeaderText="id_tipo_entrega" />
                                                                 <asp:BoundField DataField="DescuentoTotal" HeaderText="descuento_total" />

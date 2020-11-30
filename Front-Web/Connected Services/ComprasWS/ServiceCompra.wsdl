@@ -7,11 +7,17 @@
       <xsd:import schemaLocation="http://localhost:53331/ServiceCompra.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Servicio_Mant.Dominio" />
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="IServiceCompra_ListarCompra_InputMessage">
-    <wsdl:part name="parameters" element="tns:ListarCompra" />
+  <wsdl:message name="IServiceCompra_CrearCompra_InputMessage">
+    <wsdl:part name="parameters" element="tns:CrearCompra" />
   </wsdl:message>
-  <wsdl:message name="IServiceCompra_ListarCompra_OutputMessage">
-    <wsdl:part name="parameters" element="tns:ListarCompraResponse" />
+  <wsdl:message name="IServiceCompra_CrearCompra_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CrearCompraResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceCompra_ObtenerCompra_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerCompra" />
+  </wsdl:message>
+  <wsdl:message name="IServiceCompra_ObtenerCompra_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerCompraResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceCompra_ModificarCompra_InputMessage">
     <wsdl:part name="parameters" element="tns:ModificarCompra" />
@@ -19,20 +25,53 @@
   <wsdl:message name="IServiceCompra_ModificarCompra_OutputMessage">
     <wsdl:part name="parameters" element="tns:ModificarCompraResponse" />
   </wsdl:message>
+  <wsdl:message name="IServiceCompra_EliminarCompra_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarCompra" />
+  </wsdl:message>
+  <wsdl:message name="IServiceCompra_EliminarCompra_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarCompraResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceCompra_ListarCompra_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarCompra" />
+  </wsdl:message>
+  <wsdl:message name="IServiceCompra_ListarCompra_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarCompraResponse" />
+  </wsdl:message>
   <wsdl:portType name="IServiceCompra">
-    <wsdl:operation name="ListarCompra">
-      <wsdl:input wsaw:Action="http://tempuri.org/IServiceCompra/ListarCompra" message="tns:IServiceCompra_ListarCompra_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IServiceCompra/ListarCompraResponse" message="tns:IServiceCompra_ListarCompra_OutputMessage" />
+    <wsdl:operation name="CrearCompra">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceCompra/CrearCompra" message="tns:IServiceCompra_CrearCompra_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceCompra/CrearCompraResponse" message="tns:IServiceCompra_CrearCompra_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCompra">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceCompra/ObtenerCompra" message="tns:IServiceCompra_ObtenerCompra_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceCompra/ObtenerCompraResponse" message="tns:IServiceCompra_ObtenerCompra_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="ModificarCompra">
       <wsdl:input wsaw:Action="http://tempuri.org/IServiceCompra/ModificarCompra" message="tns:IServiceCompra_ModificarCompra_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IServiceCompra/ModificarCompraResponse" message="tns:IServiceCompra_ModificarCompra_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="EliminarCompra">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceCompra/EliminarCompra" message="tns:IServiceCompra_EliminarCompra_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceCompra/EliminarCompraResponse" message="tns:IServiceCompra_EliminarCompra_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarCompra">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceCompra/ListarCompra" message="tns:IServiceCompra_ListarCompra_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceCompra/ListarCompraResponse" message="tns:IServiceCompra_ListarCompra_OutputMessage" />
+    </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IServiceCompra" type="tns:IServiceCompra">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="ListarCompra">
-      <soap:operation soapAction="http://tempuri.org/IServiceCompra/ListarCompra" style="document" />
+    <wsdl:operation name="CrearCompra">
+      <soap:operation soapAction="http://tempuri.org/IServiceCompra/CrearCompra" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCompra">
+      <soap:operation soapAction="http://tempuri.org/IServiceCompra/ObtenerCompra" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -42,6 +81,24 @@
     </wsdl:operation>
     <wsdl:operation name="ModificarCompra">
       <soap:operation soapAction="http://tempuri.org/IServiceCompra/ModificarCompra" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarCompra">
+      <soap:operation soapAction="http://tempuri.org/IServiceCompra/EliminarCompra" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarCompra">
+      <soap:operation soapAction="http://tempuri.org/IServiceCompra/ListarCompra" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

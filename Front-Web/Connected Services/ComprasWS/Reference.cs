@@ -41,7 +41,7 @@ namespace Front_Web.ComprasWS {
         private int IdCompraField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdPersonaField;
+        private int IdPersonalField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int IdTipoEntregaField;
@@ -141,14 +141,14 @@ namespace Front_Web.ComprasWS {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int IdPersona {
+        public int IdPersonal {
             get {
-                return this.IdPersonaField;
+                return this.IdPersonalField;
             }
             set {
-                if ((this.IdPersonaField.Equals(value) != true)) {
-                    this.IdPersonaField = value;
-                    this.RaisePropertyChanged("IdPersona");
+                if ((this.IdPersonalField.Equals(value) != true)) {
+                    this.IdPersonalField = value;
+                    this.RaisePropertyChanged("IdPersonal");
                 }
             }
         }
@@ -206,17 +206,35 @@ namespace Front_Web.ComprasWS {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ComprasWS.IServiceCompra")]
     public interface IServiceCompra {
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceCompra/CrearCompra", ReplyAction="http://tempuri.org/IServiceCompra/CrearCompraResponse")]
+        Front_Web.ComprasWS.Compra CrearCompra(Front_Web.ComprasWS.Compra compraACrear);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceCompra/CrearCompra", ReplyAction="http://tempuri.org/IServiceCompra/CrearCompraResponse")]
+        System.Threading.Tasks.Task<Front_Web.ComprasWS.Compra> CrearCompraAsync(Front_Web.ComprasWS.Compra compraACrear);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceCompra/ObtenerCompra", ReplyAction="http://tempuri.org/IServiceCompra/ObtenerCompraResponse")]
+        Front_Web.ComprasWS.Compra ObtenerCompra(int idcompra);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceCompra/ObtenerCompra", ReplyAction="http://tempuri.org/IServiceCompra/ObtenerCompraResponse")]
+        System.Threading.Tasks.Task<Front_Web.ComprasWS.Compra> ObtenerCompraAsync(int idcompra);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceCompra/ModificarCompra", ReplyAction="http://tempuri.org/IServiceCompra/ModificarCompraResponse")]
+        Front_Web.ComprasWS.Compra ModificarCompra(Front_Web.ComprasWS.Compra compraAModificar);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceCompra/ModificarCompra", ReplyAction="http://tempuri.org/IServiceCompra/ModificarCompraResponse")]
+        System.Threading.Tasks.Task<Front_Web.ComprasWS.Compra> ModificarCompraAsync(Front_Web.ComprasWS.Compra compraAModificar);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceCompra/EliminarCompra", ReplyAction="http://tempuri.org/IServiceCompra/EliminarCompraResponse")]
+        void EliminarCompra(int idcompra);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceCompra/EliminarCompra", ReplyAction="http://tempuri.org/IServiceCompra/EliminarCompraResponse")]
+        System.Threading.Tasks.Task EliminarCompraAsync(int idcompra);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceCompra/ListarCompra", ReplyAction="http://tempuri.org/IServiceCompra/ListarCompraResponse")]
         Front_Web.ComprasWS.Compra[] ListarCompra();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceCompra/ListarCompra", ReplyAction="http://tempuri.org/IServiceCompra/ListarCompraResponse")]
         System.Threading.Tasks.Task<Front_Web.ComprasWS.Compra[]> ListarCompraAsync();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceCompra/ModificarCompra", ReplyAction="http://tempuri.org/IServiceCompra/ModificarCompraResponse")]
-        Front_Web.ComprasWS.Compra ModificarCompra([System.ServiceModel.MessageParameterAttribute(Name="ModificarCompra")] Front_Web.ComprasWS.Compra ModificarCompra1);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceCompra/ModificarCompra", ReplyAction="http://tempuri.org/IServiceCompra/ModificarCompraResponse")]
-        System.Threading.Tasks.Task<Front_Web.ComprasWS.Compra> ModificarCompraAsync(Front_Web.ComprasWS.Compra ModificarCompra);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -246,20 +264,44 @@ namespace Front_Web.ComprasWS {
                 base(binding, remoteAddress) {
         }
         
+        public Front_Web.ComprasWS.Compra CrearCompra(Front_Web.ComprasWS.Compra compraACrear) {
+            return base.Channel.CrearCompra(compraACrear);
+        }
+        
+        public System.Threading.Tasks.Task<Front_Web.ComprasWS.Compra> CrearCompraAsync(Front_Web.ComprasWS.Compra compraACrear) {
+            return base.Channel.CrearCompraAsync(compraACrear);
+        }
+        
+        public Front_Web.ComprasWS.Compra ObtenerCompra(int idcompra) {
+            return base.Channel.ObtenerCompra(idcompra);
+        }
+        
+        public System.Threading.Tasks.Task<Front_Web.ComprasWS.Compra> ObtenerCompraAsync(int idcompra) {
+            return base.Channel.ObtenerCompraAsync(idcompra);
+        }
+        
+        public Front_Web.ComprasWS.Compra ModificarCompra(Front_Web.ComprasWS.Compra compraAModificar) {
+            return base.Channel.ModificarCompra(compraAModificar);
+        }
+        
+        public System.Threading.Tasks.Task<Front_Web.ComprasWS.Compra> ModificarCompraAsync(Front_Web.ComprasWS.Compra compraAModificar) {
+            return base.Channel.ModificarCompraAsync(compraAModificar);
+        }
+        
+        public void EliminarCompra(int idcompra) {
+            base.Channel.EliminarCompra(idcompra);
+        }
+        
+        public System.Threading.Tasks.Task EliminarCompraAsync(int idcompra) {
+            return base.Channel.EliminarCompraAsync(idcompra);
+        }
+        
         public Front_Web.ComprasWS.Compra[] ListarCompra() {
             return base.Channel.ListarCompra();
         }
         
         public System.Threading.Tasks.Task<Front_Web.ComprasWS.Compra[]> ListarCompraAsync() {
             return base.Channel.ListarCompraAsync();
-        }
-        
-        public Front_Web.ComprasWS.Compra ModificarCompra(Front_Web.ComprasWS.Compra ModificarCompra1) {
-            return base.Channel.ModificarCompra(ModificarCompra1);
-        }
-        
-        public System.Threading.Tasks.Task<Front_Web.ComprasWS.Compra> ModificarCompraAsync(Front_Web.ComprasWS.Compra ModificarCompra) {
-            return base.Channel.ModificarCompraAsync(ModificarCompra);
         }
     }
 }
