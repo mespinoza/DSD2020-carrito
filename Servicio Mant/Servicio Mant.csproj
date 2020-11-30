@@ -73,6 +73,7 @@
   <ItemGroup>
     <Compile Include="Dominio\Articulo.cs" />
     <Compile Include="Dominio\Cliente.cs" />
+    <Compile Include="Dominio\CompraD.cs" />
     <Compile Include="Dominio\Compra.cs" />
     <Compile Include="Dominio\Despacho.cs" />
     <Compile Include="Dominio\Ofertac.cs" />
