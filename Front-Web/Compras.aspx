@@ -31,56 +31,25 @@
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="form-group">
+                                        
                                                     <div class="col-md-4">
-                                                        <label class="control-label col-md-4">Descripción:</label>
+                                                        <label class="control-label col-md-4">Tipo Entrega:</label>
                                                         <div class="col-md-8">
-                                                            <asp:TextBox ID="TxtCompra" runat="server" enabled="true" CssClass="form-control"></asp:TextBox>
-                                                        </div>
-                                                          </div>
-                                                    <div class="col-md-4">
-                                                        <label class="control-label col-md-4">cliente:</label>
-                                                        <div class="col-md-8">
-                                                            <asp:DropDownList ID="DDLCliente" runat="server">
-                                                                 <asp:ListItem Value="1">CLIENTE1</asp:ListItem>
-                                                              <asp:ListItem Value="0">CLIENTE2</asp:ListItem>
+                                                            <asp:DropDownList ID="DDLTipoEntrega" runat="server">
+                                                                 <asp:ListItem Value="1">DELIVERY</asp:ListItem>
+                                                              <asp:ListItem Value="2">PRESENCIAL</asp:ListItem>
                                                             </asp:DropDownList>
                                                         </div>
                                                     </div>
                                                      <div class="col-md-4">
-                                                     <label class="control-label col-md-4">PAGO:</label>
+                                                     <label class="control-label col-md-4">CUPO:</label>
                                                         <div class="col-md-8">
-                                                            <asp:DropDownList ID="DDLUnidadMedida" runat="server">
-                                                                 <asp:ListItem Value="1">EFECTIVO</asp:ListItem>
-                                                              <asp:ListItem Value="0">CREDITO</asp:ListItem>
-                                                            </asp:DropDownList>
+                                                             <asp:TextBox ID="TxtCupo" runat="server" enabled="true" CssClass="form-control"></asp:TextBox>
                                                         </div>
                                                     </div>
                                             
                                                 </div>
-                                                       <div class="form-group">
-                                                    <div class="col-md-4">
-                                                        <label class="control-label col-md-4">Descuento:</label>
-                                                        <div class="col-md-8">
-                                                            <asp:TextBox ID="TextBox1" runat="server" enabled="true" CssClass="form-control"></asp:TextBox>
-                                                        </div>
-                                                          </div>
-                                                    <div class="col-md-4">
-                                                        <label class="control-label col-md-4">Total:</label>
-                                                          <div class="col-md-8">
-                                                            <asp:TextBox ID="TextBox2" runat="server" enabled="true" CssClass="form-control"></asp:TextBox>
-                                                        </div>
-                                                    </div>
-                                                     <div class="col-md-4">
-                                                     <label class="control-label col-md-4">Estado:</label>
-                                                        <div class="col-md-8">
-                                                            <asp:DropDownList ID="DropDownList2" runat="server">
-                                                              <asp:ListItem Value="1">ACTIVO</asp:ListItem>
-                                                              <asp:ListItem Value="0">DESACTIVO</asp:ListItem>
-                                                                </asp:DropDownList>
-                                                        </div>
-                                                    </div>
-                                            
-                                                </div>
+                                      
                                                   
                                             </div>
                                         </div>
@@ -88,12 +57,12 @@
                                     <br />
                                     <div class="row ">
                                         <div class="col-md-12">
-                                            <h3 class="form-section">Compras Registrados</h3>
+                                            <h3 class="form-section">Lista de Articulos</h3>
                                             <div class="form-horizontal">
                                                 <div class="row">
                                                     <div class="col-md-12">
                                                         <div class="table-responsive">
-                                                            <asp:GridView ID="GvCompras" runat="server" AutoGenerateSelectButton="false" AutoGenerateColumns="false" class="table table-striped table-bordered table-hover" Width="100%" >
+                                                            <asp:GridView ID="GvArticulos" runat="server" AutoGenerateSelectButton="false" AutoGenerateColumns="false" class="table table-striped table-bordered table-hover" Width="100%" >
                                                                 <Columns>    
                                                          
                                                                 </Columns>

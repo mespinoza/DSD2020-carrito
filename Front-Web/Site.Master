@@ -67,6 +67,9 @@
 
                     </ul>
                     <ul class="nav navbar-nav" style="float:right">
+                         <li>
+                            <asp:LinkButton CssClass="navbar-brand" ID="btnLogin" runat="server" TabIndex="1" OnClick="btnlogin_Click">Login</asp:LinkButton>
+                        </li>
                         <li>
                             <asp:LinkButton CssClass="navbar-brand" ID="LinSalir" runat="server" TabIndex="1" OnClick="LinSalir_Click">Salir</asp:LinkButton>
                         </li>

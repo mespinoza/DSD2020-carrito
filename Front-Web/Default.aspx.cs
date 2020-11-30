@@ -12,9 +12,17 @@ namespace Front_Web
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            
             var usuario = (UsuarioModel)Session["Usuario"];
             //lblUsuario.Text = "jhon@upc.edu.pe";
-            lblUsuario.Text = usuario.Cusuario;
+            if (usuario == null)
+            {
+                lblUsuario.Text = "Falta Registrarse";
+            }
+            else
+            {
+                lblUsuario.Text = usuario.Cusuario;
+            }
 
         }
 

@@ -147,7 +147,7 @@ namespace Servicio_Mant.Persistencia
                                 idArticulo = (int)resultado["id_articulo"],
                                 descArticulo = (string)resultado["descripcion"],
                                 idCategoria = (int)resultado["id_categoria"],
-                                idUnidadMedida = (int)resultado["id_unidad_medida"],
+                           
                                 stock = (int)resultado["stock"],
                                 precio = (decimal)resultado["precio"],
                                 estado = (bool)resultado["estado"]
