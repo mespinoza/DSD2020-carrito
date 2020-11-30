@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Front_Web.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +12,19 @@ namespace Front_Web
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            var usuario = (UsuarioModel)Session["Usuario"];
+            //lblUsuario.Text = "jhon@upc.edu.pe";
+            lblUsuario.Text = usuario.Cusuario;
 
         }
+
+        //articulos que se encuentran en oferta
+        private void sb_listar_articulos_oferta()
+        {
+            //OfertaWS.ServiceOfertaClient oferta = new OfertaWS.ServiceOfertaClient();
+            //GvCompras.DataSource = servicioCompra.ListarCompra();
+            //GvCompras.DataBind();
+        }
+
     }
 }

@@ -73,7 +73,7 @@
                                             },
                                             radius: 300,
                                             inputBinding: {
-                                                latitudeInput: $('#<%=TextLat.ClientID%>'),
+                                            latitudeInput: $('#<%=TextLat.ClientID%>'),
                                             longitudeInput: $('#<%=TxtLon.ClientID%>'),
                                             radiusInput: $('#<%=TxtRadio.ClientID%>'),
                                             locationNameInput: $('#<%=TxtDireccion.ClientID%>')
@@ -112,8 +112,7 @@
         </div>
     </div>
     <!--BEGIN TABS-->
-    <!--Comentario-->
-     <!--Comentario-->
+
     <div class="row">
         <div class="col-md-12">
             <!--BEGIN TABS-->

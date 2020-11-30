@@ -2,11 +2,14 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-
+    <div><h4>Usuario:  <asp:Label ID="lblUsuario" runat="server" Font-Bold="True"></asp:Label>           
+        </h4>  
+    </div>
+    
     <div class="jumbotron">
         <h1>VENTAS ONLINE</h1>
         <p class="lead">Articulos Informaticos</p>
-
+        
         <p><a href="Usuario" class="btn btn-primary btn-lg">Comprar  &raquo;</a></p>
     </div>
 

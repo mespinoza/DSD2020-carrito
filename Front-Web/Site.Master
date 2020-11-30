@@ -4,7 +4,7 @@
 
 <html lang="es">
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%: Page.Title %> - Mi aplicación ASP.NET</title>
@@ -13,7 +13,7 @@
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
 
-    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
 </head>
@@ -47,16 +47,32 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" runat="server" href="~/">Ventas en Linea</a>
+                    <%--   <a class="navbar-brand" runat="server" href="~/">Ventas en Linea</a>--%>
+                    <asp:LinkButton CssClass="navbar-brand" ID="linkVentas" runat="server" TabIndex="1">Ventas en Linea</asp:LinkButton>
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/">Inicio</a></li>
-                        <li><a runat="server" href="~/Articulo">Articulos</a></li>
-                        <li><a runat="server" href="~/Compras">Compra</a></li>
-                        <li><a runat="server" href="~/Despacho">Despacho</a></li>
+                        <li>
+                            <asp:LinkButton ID="linkInicio" runat="server" TabIndex="2" OnClick="linkInicio_Click">Inicio</asp:LinkButton>
+                        </li>
+                        <li>
+                            <asp:LinkButton ID="LinkArticulo" runat="server" TabIndex="3" OnClick="LinkArticulo_Click">Articulos</asp:LinkButton>
+                        </li>
+                        <li>
+                            <asp:LinkButton ID="LinkCompras" runat="server" TabIndex="4" OnClick="LinkCompras_Click">Compra</asp:LinkButton>
+                        </li>
+                        <li>
+                            <asp:LinkButton ID="LinkDespacho" runat="server" TabIndex="5" OnClick="LinkDespacho_Click">Despacho</asp:LinkButton>
+                        </li>
+
+                    </ul>
+                    <ul class="nav navbar-nav" style="float:right">
+                        <li>
+                            <asp:LinkButton CssClass="navbar-brand" ID="LinSalir" runat="server" TabIndex="1" OnClick="LinSalir_Click">Salir</asp:LinkButton>
+                        </li>
                     </ul>
                 </div>
+
             </div>
         </div>
         <div class="container body-content">
@@ -64,7 +80,7 @@
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - Ventas ASP.NET</p>
+                <p>&copy; <%: DateTime.Now.Year %> - Ventas </p>
             </footer>
         </div>
 
