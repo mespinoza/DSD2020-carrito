@@ -9,8 +9,11 @@ using System.Web.UI.WebControls;
 
 namespace Front_Web
 {
+   
+
     public partial class Compras : System.Web.UI.Page
     {
+        int UsuarioSession = 0;
         void CargaProductos()
         {
             ArticuloWS.ServiceArticuloClient asc = new ArticuloWS.ServiceArticuloClient();
@@ -64,11 +67,13 @@ namespace Front_Web
             if (validacion)
             {
 
+                UsuarioSession = (int)Session["IdUsuario"];
+
                 ComprasWS.ServiceCompraClient svccompra = new ComprasWS.ServiceCompraClient();
                 ComprasWS.Compra comprareturn = new ComprasWS.Compra();
                 ComprasWS.Compra compra = new ComprasWS.Compra();
                 compra.Descripcion = TxtCupo.Text;
-                compra.IdCliente = 1;
+                compra.IdCliente = Convert.ToInt32(UsuarioSession);
                 compra.IdPersonal = 1;
                 compra.IdTipoEstado = 1;
                 compra.IdTipoEntrega = Convert.ToInt32(DDLTipoEntrega.SelectedValue);

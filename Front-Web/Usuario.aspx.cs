@@ -24,6 +24,7 @@ namespace Front_Web
                 usuarioModel.idusuario = usuario.idusuario;
                 usuarioModel.descripcion = usuario.descripcion;
                 Session["Usuario"] = usuarioModel;
+                Session["IdUsuario"] = usuario.idusuario;
                 Response.Redirect("Default.aspx");
             }
             else
