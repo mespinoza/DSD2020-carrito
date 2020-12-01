@@ -15,7 +15,8 @@
                                 <span class="caption-subject bold uppercase">MANTENIMIENTO ARTICULOS >></span>
                             </div>
                             <br />
-                            <div class="inputs">
+                            <div class="inputs"> 
+
                                 <div class="btn-group btn-group-circle">
                                     <asp:LinkButton ID="BtnNuevo" runat="server" Text="  Nuevo" Visible="true" CssClass="btn btn-default" OnClick="BtnNuevo_Click" />
                                     <asp:LinkButton ID="BtnGrabar" runat="server" Text="  Grabar" Visible="false" CssClass="btn btn-default"  OnClick="BtnGrabar_Click"/>
