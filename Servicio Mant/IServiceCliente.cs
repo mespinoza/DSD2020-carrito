@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
+using System.ServiceModel.Web;
 using System.Text;
 
 namespace Servicio_Mant
@@ -13,18 +14,27 @@ namespace Servicio_Mant
     public interface IServiceCliente
     {
         [OperationContract]
+        [WebInvoke(Method = "POST", UriTemplate = "Clientes", ResponseFormat = WebMessageFormat.Json)]
         Cliente CrearCliente(Cliente clienteCrear);
 
         [OperationContract]
+        [WebInvoke(Method = "GET", UriTemplate = "Clientes/Confirmar?idUsuario={idUsuario}", ResponseFormat = WebMessageFormat.Json)]
+        Cliente ConfirmarCliente(int idUsuario);
+
+        [OperationContract]
+        [WebInvoke(Method = "GET", UriTemplate = "Clientes?idcliente={idcliente}", ResponseFormat = WebMessageFormat.Json)]
         Cliente ObtenerCliente(int idcliente);
 
         [OperationContract]
+        [WebInvoke(Method = "PUT", UriTemplate = "Clientes", ResponseFormat = WebMessageFormat.Json)]
         Cliente ModificarCliente(Cliente clienteModificar);
 
         [OperationContract]
+        [WebInvoke(Method = "DELETE", UriTemplate = "Clientes?idcliente={idcliente}", ResponseFormat = WebMessageFormat.Json)]
         void EliminarCliente(int idcliente);
 
         [OperationContract]
+        [WebInvoke(Method = "GET", UriTemplate = "Clientes", ResponseFormat = WebMessageFormat.Json)]
         List<Cliente> ListarCliente();
     }
 }

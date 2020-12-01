@@ -10,7 +10,8 @@ namespace Servicio_Mant.Persistencia
 {
     public class ClienteDAO
     {
-        private string cadenaConexion = "Data Source=(local); Initial Catalog=Sales;Integrated Security = SSPI";
+        //private string cadenaConexion = "Data Source=(local); Initial Catalog=Sales;Integrated Security = SSPI";
+        private string cadenaConexion = "Data Source=10.2.10.173;Initial Catalog=Sales;User ID=USR_DEVRRHH;Password=d3vrrhhu5r";
 
         public Cliente Crear(Cliente clientecrear)
         {
@@ -45,7 +46,22 @@ namespace Servicio_Mant.Persistencia
             clientecreado = Obtener(codcliente);
             return clientecreado;
         }
-
+        public void Notificar(string correo, int idUsuario)
+        {
+            string sql = "Sp_NotificarRegistro";
+            using (SqlConnection conexion = new SqlConnection(cadenaConexion))
+            {
+                conexion.Open();
+                using (SqlCommand comando = new SqlCommand(sql, conexion))
+                {
+                    comando.CommandType = CommandType.StoredProcedure;
+                    comando.CommandTimeout = 3800;
+                    comando.Parameters.Add(new SqlParameter("@Correo", correo));
+                    comando.Parameters.Add(new SqlParameter("@IdUsuario", idUsuario));
+                    comando.ExecuteNonQuery();
+                }
+            }
+        }
         public Cliente Obtener(int idcliente)
         {
             Cliente clientecreado = null;

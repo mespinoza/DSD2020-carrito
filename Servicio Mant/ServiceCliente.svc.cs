@@ -1,4 +1,5 @@
 ﻿using Servicio_Mant.Dominio;
+using Servicio_Mant.Mensaje;
 using Servicio_Mant.Persistencia;
 using System;
 using System.Collections.Generic;
@@ -16,10 +17,28 @@ namespace Servicio_Mant
         private ClienteDAO asedao = new ClienteDAO();
         public Cliente CrearCliente(Cliente clienteCrear)
         {
+            Cliente cliente = null;
+            try
+            {
+                Mensajes.EnviarMensajeCliente(clienteCrear);
+                asedao.Notificar(clienteCrear.correo, clienteCrear.id_usuario);
+            }
+            catch
+            {
 
+            }
+           
+            //cliente=Mensajes.ObtenerMensajeCliente();
+            //Falta la llamada al SP.
+            return cliente;
+            //return asedao.Crear(clienteCrear);
+        }
+        public Cliente ConfirmarCliente(int idcliente)
+        {
+            Cliente clienteCrear = new Cliente();
+            clienteCrear = Mensajes.ObtenerMensajeCliente();
             return asedao.Crear(clienteCrear);
         }
-
         public Cliente ObtenerCliente(int idcliente)
         {
             return asedao.Obtener(idcliente);
