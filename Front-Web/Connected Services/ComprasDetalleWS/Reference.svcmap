@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="797f6832-0aea-4c7f-9cfa-e8cd1ce37a08" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="c2f9705e-57aa-4017-832d-32cbb3b3e5ac" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,11 +22,11 @@
     <MetadataSource Address="http://localhost:53331/ServiceCompraD.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="ServiceCompraD.xsd" MetadataType="Schema" ID="300bd8e4-31d3-4f9d-8cbb-f2fb909320f6" SourceId="1" SourceUrl="http://localhost:53331/ServiceCompraD.svc?xsd=xsd1" />
-    <MetadataFile FileName="ServiceCompraD1.xsd" MetadataType="Schema" ID="420926a4-7c91-49cf-88c3-330773a17266" SourceId="1" SourceUrl="http://localhost:53331/ServiceCompraD.svc?xsd=xsd2" />
-    <MetadataFile FileName="ServiceCompraD2.xsd" MetadataType="Schema" ID="a202d395-456f-425b-a3f2-e8cf2e41d8fd" SourceId="1" SourceUrl="http://localhost:53331/ServiceCompraD.svc?xsd=xsd0" />
-    <MetadataFile FileName="ServiceCompraD.wsdl" MetadataType="Wsdl" ID="46daa69f-75f8-4a4f-a6c9-01f660dbfe1c" SourceId="1" SourceUrl="http://localhost:53331/ServiceCompraD.svc?wsdl" />
-    <MetadataFile FileName="ServiceCompraD.disco" MetadataType="Disco" ID="8a8607ac-5836-41a3-baa0-c0f7209cc985" SourceId="1" SourceUrl="http://localhost:53331/ServiceCompraD.svc?disco" />
+    <MetadataFile FileName="ServiceCompraD.xsd" MetadataType="Schema" ID="69b7cfcf-f043-4cd1-bd85-6bce0a8ce4d9" SourceId="1" SourceUrl="http://localhost:53331/ServiceCompraD.svc?xsd=xsd1" />
+    <MetadataFile FileName="ServiceCompraD1.xsd" MetadataType="Schema" ID="1a3e90f4-07c8-4827-954b-3ce9784cf085" SourceId="1" SourceUrl="http://localhost:53331/ServiceCompraD.svc?xsd=xsd2" />
+    <MetadataFile FileName="ServiceCompraD2.xsd" MetadataType="Schema" ID="7531eac3-67fd-4e6f-9572-7ad43d8bd4ea" SourceId="1" SourceUrl="http://localhost:53331/ServiceCompraD.svc?xsd=xsd0" />
+    <MetadataFile FileName="ServiceCompraD.wsdl" MetadataType="Wsdl" ID="129df103-0f42-4191-8752-4d342d7689d2" SourceId="1" SourceUrl="http://localhost:53331/ServiceCompraD.svc?wsdl" />
+    <MetadataFile FileName="ServiceCompraD.disco" MetadataType="Disco" ID="5304eb61-6409-4e26-b42d-9a0ec4a62649" SourceId="1" SourceUrl="http://localhost:53331/ServiceCompraD.svc?disco" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

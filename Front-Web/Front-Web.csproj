@@ -116,6 +116,16 @@
     <Content Include="Connected Services\ArticuloWS\Front_Web.ArticuloWS.Articulo.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\ComprasDetalleWS\Front_Web.ComprasDetalleWS.CompraD.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\ComprasDetalleWS\ServiceCompraD.disco" />
+    <None Include="Connected Services\ComprasDetalleWS\configuration91.svcinfo" />
+    <None Include="Connected Services\ComprasDetalleWS\configuration.svcinfo" />
+    <None Include="Connected Services\ComprasDetalleWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Web.config" />
     <None Include="Connected Services\ArticuloWS\ServiceArticulo.wsdl" />
     <None Include="Connected Services\ArticuloWS\ServiceArticulo.xsd">
@@ -127,9 +137,6 @@
     <None Include="Connected Services\ArticuloWS\ServiceArticulo2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <Content Include="Connected Services\ComprasDetalleWS\Front_Web.ComprasDetalleWS.CompraD.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
     <None Include="Connected Services\ComprasDetalleWS\ServiceCompraD.wsdl" />
     <None Include="Connected Services\ComprasDetalleWS\ServiceCompraD.xsd">
       <SubType>Designer</SubType>
@@ -146,13 +153,6 @@
     <None Include="Connected Services\ArticuloWS\configuration91.svcinfo" />
     <None Include="Connected Services\ArticuloWS\configuration.svcinfo" />
     <None Include="Connected Services\ArticuloWS\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <None Include="Connected Services\ComprasDetalleWS\ServiceCompraD.disco" />
-    <None Include="Connected Services\ComprasDetalleWS\configuration91.svcinfo" />
-    <None Include="Connected Services\ComprasDetalleWS\configuration.svcinfo" />
-    <None Include="Connected Services\ComprasDetalleWS\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

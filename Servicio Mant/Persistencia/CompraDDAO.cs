@@ -10,10 +10,11 @@ namespace Servicio_Mant.Persistencia
     public class CompraDAOD
     {
         private string cadenaConexion = "Data Source=(local); Initial Catalog=Sales;Integrated Security = SSPI";
+        //private string cadenaConexion = "server=SISTEMASRW;uid=sa;password=adm123$$;database=sales;";
         public CompraD CrearCompraD(CompraD compraDACrear)
         {
             CompraD compraDCreada = null;
-            string sql = "INSERT INTO COMPRA_D VALUES (@idcompra, @idarticulo, " +
+            string sql = "INSERT INTO COMPRA_D VALUES (@idcomprad,@idcompra, @idarticulo, " +
                                 "@cantidad, @descuento, @precio, @subtotal, " +
                                 "@total, @estado)";
             using (SqlConnection conexion = new SqlConnection(cadenaConexion))

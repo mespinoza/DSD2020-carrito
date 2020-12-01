@@ -4,24 +4,33 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace Servicio_Mant.Persistencia
 {
     public class CompraDAO
     {
         private string cadenaConexion = "Data Source=(local); Initial Catalog=Sales;Integrated Security = SSPI";
+        //private string cadenaConexion = "server=SISTEMASRW;uid=sa;password=adm123$$;database=sales;";
         public Compra CrearCompra(Compra compraACrear)
         {
+            int idcompre = 0;
+
             Compra compraCreada = null;
-            string sql = "INSERT INTO Compra VALUES (@descripcion, @idcliente, " +
-                                "@idpersonal, @idtipoestado, @idtipoentrega, @descuentototal, " +
-                                "@sumatotal, @fechaentrega, @estado)";
+            //string sql = "INSERT INTO Compra VALUES (@descripcion, @idcliente, " +
+            //                    "@idpersonal, @idtipoestado, @idtipoentrega, @descuentototal, " +
+            //                    "@sumatotal, @fechaentrega, @estado);select SCOPE_IDENTITY() @idcomprass";
+            string sql = "Sp_Compras";
             using (SqlConnection conexion = new SqlConnection(cadenaConexion))
             {
                 conexion.Open();
                 using (SqlCommand comando = new SqlCommand(sql, conexion))
                 {
-                    comando.Parameters.Add(new SqlParameter("@idcompra", compraACrear.IdCompra));
+                    comando.CommandType = CommandType.StoredProcedure;
+                    comando.CommandTimeout = 3800;
+
+                    //comando.Parameters.Add(new SqlParameter("@idcompra", compraACrear.IdCompra));
                     comando.Parameters.Add(new SqlParameter("@descripcion", compraACrear.Descripcion));
                     comando.Parameters.Add(new SqlParameter("@idcliente", compraACrear.IdCliente));
                     comando.Parameters.Add(new SqlParameter("@idpersonal", compraACrear.IdPersonal));
@@ -31,11 +40,16 @@ namespace Servicio_Mant.Persistencia
                     comando.Parameters.Add(new SqlParameter("@sumatotal", compraACrear.SumaTotal));
                     comando.Parameters.Add(new SqlParameter("@fechaentrega", compraACrear.FechaEntrega));
                     comando.Parameters.Add(new SqlParameter("@estado", compraACrear.Estado));
+                    comando.Parameters.AddWithValue("@idcomprasalida", SqlDbType.Int).Direction = ParameterDirection.Output;
+
+
                     comando.ExecuteNonQuery();
+
+                    idcompre = Convert.ToInt32(comando.Parameters["@idcomprasalida"].Value);
                 }
             }
 
-            compraCreada = ObtenerCompra(compraACrear.IdCompra);
+            compraCreada = ObtenerCompra(idcompre);//compraACrear.IdCompra);
             return compraCreada;
         }
 
