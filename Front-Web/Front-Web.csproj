@@ -126,12 +126,32 @@
     <None Include="Connected Services\ArticuloWS\ServiceArticulo2.xsd">
       <SubType>Designer</SubType>
     </None>
+    <Content Include="Connected Services\ComprasDetalleWS\Front_Web.ComprasDetalleWS.CompraD.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\ComprasDetalleWS\ServiceCompraD.wsdl" />
+    <None Include="Connected Services\ComprasDetalleWS\ServiceCompraD.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ComprasDetalleWS\ServiceCompraD1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ComprasDetalleWS\ServiceCompraD2.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\ComprasWS\configuration91.svcinfo" />
     <None Include="Connected Services\ComprasWS\configuration.svcinfo" />
     <None Include="Connected Services\ArticuloWS\ServiceArticulo.disco" />
     <None Include="Connected Services\ArticuloWS\configuration91.svcinfo" />
     <None Include="Connected Services\ArticuloWS\configuration.svcinfo" />
     <None Include="Connected Services\ArticuloWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\ComprasDetalleWS\ServiceCompraD.disco" />
+    <None Include="Connected Services\ComprasDetalleWS\configuration91.svcinfo" />
+    <None Include="Connected Services\ComprasDetalleWS\configuration.svcinfo" />
+    <None Include="Connected Services\ComprasDetalleWS\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -314,6 +334,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\ComprasDetalleWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\ComprasWS\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -343,6 +368,7 @@
     </Compile>
     <Compile Include="Despacho.aspx.cs">
       <DependentUpon>Despacho.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Despacho.aspx.designer.cs">
       <DependentUpon>Despacho.aspx</DependentUpon>
@@ -369,6 +395,7 @@
     </Compile>
     <Compile Include="Usuario.aspx.cs">
       <DependentUpon>Usuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Usuario.aspx.designer.cs">
       <DependentUpon>Usuario.aspx</DependentUpon>
@@ -400,6 +427,7 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\ArticuloWS\" />
+    <WCFMetadataStorage Include="Connected Services\ComprasDetalleWS\" />
     <WCFMetadataStorage Include="Connected Services\ComprasWS\" />
     <WCFMetadataStorage Include="Connected Services\DespachoWS\" />
     <WCFMetadataStorage Include="Connected Services\UsuarioWS\" />

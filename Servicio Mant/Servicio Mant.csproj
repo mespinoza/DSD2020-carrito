@@ -65,6 +65,7 @@
     <Content Include="ServiceArticulo.svc" />
     <Content Include="ServiceCliente.svc" />
     <Content Include="ServiceCompra.svc" />
+    <Content Include="ServiceCompraD.svc" />
     <Content Include="ServiceDespacho.svc" />
     <Content Include="ServiceOferta.svc" />
     <Content Include="ServiceUsuario.svc" />
@@ -84,11 +85,13 @@
     <Compile Include="IServiceArticulo.cs" />
     <Compile Include="IServiceCliente.cs" />
     <Compile Include="IServiceCompra.cs" />
+    <Compile Include="IServiceCompraD.cs" />
     <Compile Include="IServiceDespacho.cs" />
     <Compile Include="IServiceOferta.cs" />
     <Compile Include="IServiceUsuario.cs" />
     <Compile Include="Persistencia\articuloDAO.cs" />
     <Compile Include="Persistencia\ClienteDAO.cs" />
+    <Compile Include="Persistencia\CompraDDAO.cs" />
     <Compile Include="Persistencia\CompraDAO.cs" />
     <Compile Include="Persistencia\DespachoDAO.cs" />
     <Compile Include="Persistencia\ofertaDAO.cs" />
@@ -103,6 +106,9 @@
     </Compile>
     <Compile Include="ServiceCompra.svc.cs">
       <DependentUpon>ServiceCompra.svc</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceCompraD.svc.cs">
+      <DependentUpon>ServiceCompraD.svc</DependentUpon>
     </Compile>
     <Compile Include="ServiceDespacho.svc.cs">
       <DependentUpon>ServiceDespacho.svc</DependentUpon>

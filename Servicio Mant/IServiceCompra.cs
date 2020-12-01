@@ -22,9 +22,6 @@ namespace Servicio_Mant
         [OperationContract]
         Compra ModificarCompra(Compra compraAModificar);
 
-
-
-
         [OperationContract]
         void EliminarCompra(int idcompra);
 

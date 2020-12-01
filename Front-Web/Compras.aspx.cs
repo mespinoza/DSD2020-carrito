@@ -33,7 +33,17 @@ namespace Front_Web
 
             svccompra.CrearCompra(compra);
 
+            //agregando el detalle
+            ComprasDetalleWS.ServiceCompraDClient svccomprad = new ComprasDetalleWS.ServiceCompraDClient();
+            ComprasDetalleWS.CompraD comprad = new ComprasDetalleWS.CompraD();
+
+
             ScriptManager.RegisterStartupScript(UpdatePanel1, UpdatePanel1.GetType(), "alerta", "alert('Compra Registrada con Exito')", true);
+            limpiar();
+        }
+
+        private void limpiar() {
+            TxtCupo.Text = "";
         }
 
     }
