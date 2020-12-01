@@ -12,15 +12,13 @@ namespace Servicio_Mant.Persistencia
     public class CompraDAO
     {
         private string cadenaConexion = "Data Source=(local); Initial Catalog=Sales;Integrated Security = SSPI";
-        //private string cadenaConexion = "server=SISTEMASRW;uid=sa;password=adm123$$;database=sales;";
+
         public Compra CrearCompra(Compra compraACrear)
         {
             int idcompre = 0;
 
             Compra compraCreada = null;
-            //string sql = "INSERT INTO Compra VALUES (@descripcion, @idcliente, " +
-            //                    "@idpersonal, @idtipoestado, @idtipoentrega, @descuentototal, " +
-            //                    "@sumatotal, @fechaentrega, @estado);select SCOPE_IDENTITY() @idcomprass";
+
             string sql = "Sp_Compras";
             using (SqlConnection conexion = new SqlConnection(cadenaConexion))
             {
@@ -30,7 +28,7 @@ namespace Servicio_Mant.Persistencia
                     comando.CommandType = CommandType.StoredProcedure;
                     comando.CommandTimeout = 3800;
 
-                    //comando.Parameters.Add(new SqlParameter("@idcompra", compraACrear.IdCompra));
+
                     comando.Parameters.Add(new SqlParameter("@descripcion", compraACrear.Descripcion));
                     comando.Parameters.Add(new SqlParameter("@idcliente", compraACrear.IdCliente));
                     comando.Parameters.Add(new SqlParameter("@idpersonal", compraACrear.IdPersonal));
@@ -49,7 +47,7 @@ namespace Servicio_Mant.Persistencia
                 }
             }
 
-            compraCreada = ObtenerCompra(idcompre);//compraACrear.IdCompra);
+            compraCreada = ObtenerCompra(idcompre);
             return compraCreada;
         }
 
