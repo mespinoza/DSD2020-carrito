@@ -10,7 +10,7 @@ using System.Data.SqlClient;
 namespace Servicio_Mant.Persistencia
 {
     public class CompraDAO
-    {//pareja
+    {
        
         private string cadenaConexion = "Data Source=(local); Initial Catalog=Sales;Integrated Security = SSPI";
 
