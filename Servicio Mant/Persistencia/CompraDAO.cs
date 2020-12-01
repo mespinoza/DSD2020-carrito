@@ -13,6 +13,7 @@ namespace Servicio_Mant.Persistencia
     {
         private string cadenaConexion = "Data Source=(local); Initial Catalog=Sales;Integrated Security = SSPI";
 
+
         public Compra CrearCompra(Compra compraACrear)
         {
             int idcompre = 0;
